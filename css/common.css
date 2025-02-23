@@ -1,14 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.item {
+  max-width: 392px;
+  max-height: 264px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #f6f6fe;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.item h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 4%;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.item li {
+  max-width: 360px;
+  max-height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  color: #2e2f42;
+  padding: 8px;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.gallery {
+  max-width: 1440px;
+  max-height: 848px;
+  background-color: #ffffff;
+}
+
+.name-input {
+  width: 360px;
+  height: 40px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 0 8px 16px;
+  margin: 24px 24px 16px;
+}
+
+.header {
+  height: 32px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-left: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 64px;
+  margin-left: 24px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+.login-form input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin: 8px 0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form button {
+  width: 86px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 4%;
+  color: #2e2f42;
+}
+
+.widget button {
+  width: 148px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: #f6f6fe;
+  height: 104px;
+  padding: 32px;
+  margin-bottom: 16px;
+}
+
+#controls input {
+  width: 150px;
+  appearance: none;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  height: 40px;
+  font-family: Montserrat, sans-serif;
+  color: #2e2f42;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+/* remove default arrows in browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#controls button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+#controls button[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+#boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 44px;
+  justify-content: center;
+  align-items: top;
+  background-color: #f6f6fe;
+  padding: 32px;
 }

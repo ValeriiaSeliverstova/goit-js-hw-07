@@ -26,16 +26,23 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-
 const galleryMarkup = images
   .map(
     ({ url, alt }) =>
-      `<li class="gallery-item"><img src="${url}" alt="${alt}" width="300"></li>`
+      `<li class="gallery-item"><img src="${url}" alt="${alt}" width="360" height="300"></li>`
   )
   .join("");
 gallery.insertAdjacentHTML("beforeend", galleryMarkup);
 
+document.querySelectorAll(".gallery-item img").forEach((img) => {
+  img.style.objectFit = "cover";
+});
+
 gallery.style.listStyle = "none";
 gallery.style.display = "flex";
-gallery.style.justifyContent = "space-between";
-gallery.style.alignItems = "center";
+gallery.style.flexWrap = "wrap";
+gallery.style.justifyContent = "center";
+gallery.style.gap = "48px 24px";
+gallery.style.padding = "0";
+gallery.style.maxWidth = "1128px";
+gallery.style.margin = "100px auto";

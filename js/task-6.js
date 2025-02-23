@@ -40,3 +40,4 @@ function destroyBoxes() {
 }
 
 destroyBtn.addEventListener("click", destroyBoxes);
+
