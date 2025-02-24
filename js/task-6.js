@@ -9,12 +9,10 @@ const boxes = document.querySelector("#boxes");
 const createBtn = document.querySelector("button[data-create]");
 
 function createBoxes(amount) {
-  if (isNaN(amount) || amount < 1 || amount > 100) {
-    alert("Please enter a number between 1 and 100");
-    return;
-  }
 
   boxes.replaceChildren();
+
+  const boxesFragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i += 1) {
     const newDiv = document.createElement("div");
@@ -22,14 +20,18 @@ function createBoxes(amount) {
     newDiv.style.height = `${30 + i * 10}px`;
     newDiv.style.backgroundColor = getRandomHexColor();
 
-    boxes.appendChild(newDiv);
+    boxesFragment.appendChild(newDiv);
   }
-
+  boxes.appendChild(boxesFragment);
   input.value = "";
 }
 
 createBtn.addEventListener("click", () => {
   const amount = parseInt(input.value);
+  if (isNaN(amount) || amount < 1 || amount > 100) {
+    alert("Please enter a number between 1 and 100");
+    return;
+  }
   createBoxes(amount);
 });
 
